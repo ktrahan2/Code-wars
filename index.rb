@@ -20,5 +20,13 @@ def get_sum(a,b)
   end
 end
 
+#8.13.2020 Solution "toJadenCase"
+class String
+  def toJadenCase
+    split(" ").map do |word|
+      word.capitalize 
+    end.join(" ")
+  end
+end
     
 binding.pry
