@@ -23,10 +23,24 @@ end
 #8.13.2020 Solution "toJadenCase"
 class String
   def toJadenCase
-    split(" ").map do |word|
+    self.split(" ").map do |word|
       word.capitalize 
     end.join(" ")
   end
 end
     
+#8.14.2020 Solution "Basic Mathematical Operations"
+def basic_op(operator, value1, value2)
+  if operator == "+"
+      sum = value1 + value2
+  elsif operator == '-'
+      sum = value1 - value2
+  elsif operator == '*'
+      sum = value1 * value2
+  elsif operator == '/'
+      sum = value1 / value2
+  end
+  sum
+end
+
 binding.pry
