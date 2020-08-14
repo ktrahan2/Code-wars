@@ -43,4 +43,12 @@ def basic_op(operator, value1, value2)
   sum
 end
 
+#8.14.2020 Solution "Duplicate Encoder"
+def duplicate_encode(word)
+  word.downcase.chars.map do |char|
+    word.downcase.count(char) > 1 ? ')' : '('
+  end.join
+end
+
+
 binding.pry
