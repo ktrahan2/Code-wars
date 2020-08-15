@@ -50,5 +50,12 @@ def duplicate_encode(word)
   end.join
 end
 
+#8.15.2020 Solution "List Filtering"
+def filter_list(l)
+  l.select do |data|
+    data.is_a? Integer
+  end
+end
+
 
 binding.pry
