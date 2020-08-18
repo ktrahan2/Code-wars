@@ -57,5 +57,14 @@ def filter_list(l)
   end
 end
 
+#8.17.2020 Solution "Returning Strings"
+def greet(name)
+  "Hello, #{name} how are you doing today?"
+end
+
+#8.18.2020 Solution "Capitalization and Mutability"
+def capitalize_word(word)
+  word.capitalize
+end
 
 binding.pry
