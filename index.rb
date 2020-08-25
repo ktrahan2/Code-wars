@@ -43,7 +43,7 @@ def basic_op(operator, value1, value2)
   sum
 end
 
-#8.14.2020 Solution "Duplicate Encoder"
+#8.14.2020 Solution 2 "Duplicate Encoder"
 def duplicate_encode(word)
   word.downcase.chars.map do |char|
     word.downcase.count(char) > 1 ? ')' : '('
@@ -79,6 +79,15 @@ def sum_two_smallest_numbers(numbers)
   numbers.min(2).reduce(:+)
 end
 
+#8.25.2020 Solution 2 Pair coding "unqie ordering"
+def unique_in_order(iterable)
+  iterable = iterable.chars if iterable.is_a?(String)
+  answer = []
+  iterable.each do |el|
+    answer << el if answer.last != el
+  end
+  answer
+end
 
 
 binding.pry
