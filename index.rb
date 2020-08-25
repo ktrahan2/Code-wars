@@ -67,4 +67,18 @@ def capitalize_word(word)
   word.capitalize
 end
 
+
+#8.25.2020 Solution "Sum of two lowest positive integers"
+def sum_two_smallest_numbers(numbers)
+  #pull out the lowest two numbers and then add them together
+  sorted_num = numbers.sort
+  sorted_num[0] + sorted_num[1] 
+end
+
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).reduce(:+)
+end
+
+
+
 binding.pry
