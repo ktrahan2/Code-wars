@@ -89,5 +89,15 @@ def unique_in_order(iterable)
   answer
 end
 
+#8.27.2020 Solution ""
+def count_chars(s)
+  hash = Hash.new(0)
+  new_array = s.split("")
+  new_array.map do |character|
+    hash[character] += 1
+  end
+  hash
+end
+
 
 binding.pry
