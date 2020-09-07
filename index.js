@@ -12,3 +12,8 @@ function checkAlive (health) {
       return true
     }
   }
+
+//9.7.2020 Solution "Can we divide it?"
+function isDivideBy(number, a, b) {
+  return [a, b].every(i => number % i === 0)
+}
