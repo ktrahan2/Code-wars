@@ -17,3 +17,9 @@ function checkAlive (health) {
 function isDivideBy(number, a, b) {
   return [a, b].every(i => number % i === 0)
 }
+
+
+//9.8.2020 Solution "simple equation reversal"
+function solve(eq){
+  return eq.split(/([*\+\-\/])/).reverse().join('');
+}
