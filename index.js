@@ -23,3 +23,14 @@ function isDivideBy(number, a, b) {
 function solve(eq){
   return eq.split(/([*\+\-\/])/).reverse().join('');
 }
+
+//9.14.2020 SOlution "N-th power"
+function index(array, n){
+  let number = array[n]
+  if (array.length <= n) {
+    return -1
+  }
+  else {
+    return number**n
+  }
+}
