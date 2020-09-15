@@ -34,3 +34,23 @@ function index(array, n){
     return number**n
   }
 }
+
+//9.15.2020 Solution "Debug sayHello"
+function sayHello(name) {
+  return `Hello, ${name}`
+}
+
+//9.15.2020 Solution "Grasshopper - Debug"
+function weatherInfo (temp) {
+  var c = convertToCelsius(temp)
+  if (c <= 0) {
+    return (c + " is freezing temperature")
+  } else {
+    return (c + " is above freezing temperature")
+  }
+  return answer
+}
+function convertToCelsius (temperature) {
+  var celsius = (temperature - 32) * (5/9)
+  return celsius
+}
