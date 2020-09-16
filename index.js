@@ -48,9 +48,13 @@ function weatherInfo (temp) {
   } else {
     return (c + " is above freezing temperature")
   }
-  return answer
 }
 function convertToCelsius (temperature) {
   var celsius = (temperature - 32) * (5/9)
   return celsius
+}
+
+//9.16.2020 Solution "Hungarian Vowel Harmoney"
+function dative(word) {
+  return (/[aáoóuú]/.test(word)) ? word + "nak" : word + "nek";
 }
