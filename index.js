@@ -58,3 +58,9 @@ function convertToCelsius (temperature) {
 function dative(word) {
   return (/[aáoóuú]/.test(word)) ? word + "nak" : word + "nek";
 }
+
+//10.5.2020 Solution "Array Element Parity"
+function solve(arr) {
+  for (var i = 0; i < arr.length; i++)
+    if (!arr.includes(-1 * arr[i])) return arr[i];
+}
