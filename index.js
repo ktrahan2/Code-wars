@@ -64,3 +64,12 @@ function solve(arr) {
   for (var i = 0; i < arr.length; i++)
     if (!arr.includes(-1 * arr[i])) return arr[i];
 }
+
+//10.9.2020 Solution "dejonnify"
+function decodeMsg(message) {
+  let mapped = message.split('jon')
+    .map(string => {
+      return String.fromCharCode(parseInt(string, 2))
+    })
+    return mapped.join("")
+}
