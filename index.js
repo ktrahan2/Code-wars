@@ -73,3 +73,9 @@ function decodeMsg(message) {
     })
     return mapped.join("")
 }
+
+//10.15.2020 Solution "Keep Hydrated"
+function litres(time) {
+  let litres = time * .5
+  return Math.floor(litres)
+}
