@@ -79,3 +79,15 @@ function litres(time) {
   let litres = time * .5
   return Math.floor(litres)
 }
+
+//10.15.2020 Solution "Are you Playing Banjo"
+function areYouPlayingBanjo(name) {
+  name = name.split("")
+  if (name[0] == "R" || name[0] == "r") {
+    name = name.join("")
+    return `${name} plays banjo`
+  } else {
+    name = name.join("")
+    return `${name} does not play banjo`
+  }
+}
