@@ -83,7 +83,7 @@ function litres(time) {
 //10.15.2020 Solution "Are you Playing Banjo"
 function areYouPlayingBanjo(name) {
   name = name.split("")
-  if (name[0] == "R" || name[0] == "r") {
+  if (name[0].toLowerCase() == "r") {
     name = name.join("")
     return `${name} plays banjo`
   } else {
