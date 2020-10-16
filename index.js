@@ -91,3 +91,29 @@ function areYouPlayingBanjo(name) {
     return `${name} does not play banjo`
   }
 }
+
+//10.16.2020 Solution "largest product or sum"
+function sumOrProduct(array, n) {
+  let sortedArray = array.sort((a, b) => {
+  return a - b;
+  }) 
+  let smallestArray = sortedArray.slice(0, n)
+  let largestArray = sortedArray.slice((-1*n))
+
+  let smallestTotal = smallestArray.reduce((sum, el) => {
+    return sum * el
+  })
+
+  let largestTotal = largestArray.reduce((sum, el) => {
+    return sum + el
+  })
+
+  if (smallestTotal > largestTotal) {
+    return 'product'
+  } else if (smallestTotal < largestTotal) {
+    return 'sum'
+  }
+  else {
+    return 'same'
+  }
+}
