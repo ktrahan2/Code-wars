@@ -117,3 +117,13 @@ function sumOrProduct(array, n) {
     return 'same'
   }
 }
+
+//10.24.2020 Solution ""
+function validSpacing(s) {
+  if (s.includes('  ')) {
+    return false
+  } else if (s.trim().length !== s.length) {
+    return false
+  }
+  return true
+}
