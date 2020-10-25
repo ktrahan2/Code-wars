@@ -127,3 +127,22 @@ function validSpacing(s) {
   }
   return true
 }
+
+//10.25.2020 Solution "longest vowel chain"
+function solve(s){
+  let vowels = ["a", "e", "i", "o", "u"]
+  let count = 0
+  let biggestCount = 0
+  for (let i = 0; i < s.length - 1; i ++) {
+    if (vowels.includes(s[i]) 
+       && vowels.includes(s[i + 1])) {
+         count++
+     } else {
+       if (biggestCount < count) {
+       biggestCount = count
+       }
+       count = 1
+     }
+  } 
+   return biggestCount
+ }
