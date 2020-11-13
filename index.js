@@ -146,3 +146,14 @@ function solve(s){
   } 
    return biggestCount
  }
+
+ //11.13.2020 Soltuion "String ends with?"
+ function solution(str, ending){
+  
+  let endingLength = ending.length
+  
+  let newString = str.slice(-endingLength)
+  
+  return newString === ending || ending === "" ? true : false
+  
+}
