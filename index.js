@@ -157,3 +157,9 @@ function solve(s){
   return newString === ending || ending === "" ? true : false
   
 }
+
+//11.14.2020 Solution "Reverse Words"
+
+function reverseWords(str) {
+  return str.split(' ').reverse().join(' ')
+}
