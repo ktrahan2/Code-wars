@@ -163,3 +163,14 @@ function solve(s){
 function reverseWords(str) {
   return str.split(' ').reverse().join(' ')
 }
+
+//11.15.2020 Solution "Weird String Case"
+
+const toWeirdCase = (string) => {
+
+  return string.split(' ').map(word => {
+    return word.split('').map((el, index) => {
+      return index % 2 == 0 ? el.toUpperCase() : el.toLowerCase()
+    }).join('')
+  }).join(" ")
+}
