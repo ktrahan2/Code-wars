@@ -174,3 +174,40 @@ const toWeirdCase = (string) => {
     }).join('')
   }).join(" ")
 }
+
+//11.16.2020 Solution 
+
+const solveB = (B) => {
+  let newB = B 
+    .toString()
+    .split("")
+    .map(el => {
+      let newArray = []
+      el == 1 ? newArray.push(0) : newArray.push(1)
+      return newArray})
+    .join("")
+    return newB
+}
+
+
+//11.17.2020 Solution "Concatenate Integers"
+var inputs = readline().split(' ');
+const A = parseInt(inputs[0]);
+const B = parseInt(inputs[1]);
+
+let addIntegers = (A, B) => {
+    return A + B
+ }
+
+let subIntegers = (A, B) => {
+    return A - B
+}
+
+let concatenatedResults = (A, B) => {
+    let sub = subIntegers(A, B).toString()
+    let add = addIntegers(A, B).toString()
+    let sum = sub + add
+    console.log(sum)
+}
+
+concatenatedResults(A, B)
