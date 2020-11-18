@@ -211,3 +211,4 @@ let concatenatedResults = (A, B) => {
 }
 
 concatenatedResults(A, B)
+
