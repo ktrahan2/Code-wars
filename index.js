@@ -212,3 +212,25 @@ let concatenatedResults = (A, B) => {
 
 concatenatedResults(A, B)
 
+//11.18.2020 Solution "does my number look big in this?"
+function narcissistic(value) {
+  let sum = 0
+  value = value.toString()
+  for (let i = 0; i < value.length; i++) {
+    sum = sum + value[i]**value.length
+  }
+  if ( sum == value ) {
+    return true
+  } else {
+    return false
+  }
+}
+
+//11.19.2020 Solution "two sum"
+function twoSum(numbers, target) {
+  for (var i = 0; i < numbers.length-1; i++) {
+      for (var j = i+1; j < numbers.length; j++) {
+          if (numbers[i] + numbers[j] === target) return [i, j];
+      }
+  }
+}
