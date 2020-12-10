@@ -100,14 +100,16 @@ require 'set'
 #   hash
 # end
 
-positiveEffects2 = ["tired"]
-positiveEffect = ["happy", "giggly"]
-selectedEffects = ["happy", "giggly"]
-def findPosEffects(positiveEffects2, selectedEffects)
-  positiveEffects2.to_set.subset?(selectedEffects.to_set)
-end
+# 12.6.2020 Solution "filter effects"
+# positiveEffects2 = ["tired"]
+# positiveEffect = ["happy", "giggly"]
+# selectedEffects = ["happy", "giggly"]
 
-# puts findPosEffects(positiveEffect, selectedEffects)
-puts findPosEffects(positiveEffects2, selectedEffects)
+# def findPosEffects(positiveEffects2, selectedEffects)
+#   positiveEffects2.to_set.subset?(selectedEffects.to_set)
+# end
 
-# binding.pry
+# # puts findPosEffects(positiveEffect, selectedEffects)
+# puts findPosEffects(positiveEffects2, selectedEffects)
+
+binding.pry

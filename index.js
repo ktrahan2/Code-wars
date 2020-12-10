@@ -260,3 +260,34 @@ function filterStrainByPosEffect(positiveEffectArray, strain) {
 console.log(filterStrainByPosEffect(positiveEffectArray, strain1))
 console.log(filterStrainByPosEffect(positiveEffectArray, strain2))
 
+
+// write a function that sums together all of the letter values of a string
+// for example stringSum( "abzc" ) => 1 + 2 + 26 + 3 => 6
+// stringSum('Abc') => [1 + 2 + 3]
+// numbers and symbols will all equal 0 ' ' ()
+
+// sum all string values together 
+// a = 1
+
+function findStringSum(string) {
+  let numbersArray = string.split("").map(letter => returnLetterValue(letter))
+  return numbersArray.reduce((acc, sum) => {
+      return acc += sum
+  })
+}
+
+function returnLetterValue(letter) {
+  return isNaN(letter) ? letter.toLowerCase().charCodeAt()-96 : 0
+}
+
+// console.log(returnLetterValue('a'))
+//normal case - passing
+let test1 = "abzc" //expected output 32
+//capital letter case - passing
+let test2 = "Abzc" //expected output 32
+//number case - passing
+let test3 = "Ab3c" //expected output 6
+
+console.log(findStringSum(test1))
+console.log(findStringSum(test2))
+console.log(findStringSum(test3))
