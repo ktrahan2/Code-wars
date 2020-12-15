@@ -288,6 +288,35 @@ let test2 = "Abzc" //expected output 32
 //number case - passing
 let test3 = "Ab3c" //expected output 6
 
-console.log(findStringSum(test1))
-console.log(findStringSum(test2))
-console.log(findStringSum(test3))
+// console.log(findStringSum(test1))
+// console.log(findStringSum(test2))
+// console.log(findStringSum(test3))
+
+//Solution 12/15 Rot13
+
+function rot13(message){
+  let currentCharCode = 0
+  let newMessage = []
+  message.split("").map(el => {
+    if (isLetter(el)) {
+  
+      currentCharCode = el.charCodeAt() + 13
+      
+      if (currentCharCode >= 97 && currentCharCode <= 135 && currentCharCode > 122) {
+      currentCharCode = (currentCharCode - 122) + 96
+      } else if (currentCharCode >= 65 && currentCharCode <= 103 && currentCharCode > 90) {
+      currentCharCode = (currentCharCode - 90) + 64
+      }
+    
+      newMessage.push(String.fromCharCode(currentCharCode))
+    } else {
+      newMessage.push(el)
+    }
+    
+  })
+  return newMessage.join("")
+}
+
+function isLetter(str) {
+  return str.length === 1 && str.match(/[a-z]/i);
+}
